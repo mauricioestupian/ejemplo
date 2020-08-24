@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Calculadora</title>
+
+<script type="text/javascript">
+	function datos() {
+		var n1= document.form1.t_num1.value;
+		var n2=document.getElementById('t_num2').value;
+		var op = document.querySelector('[name="opcion"]:checked').value;
+		n1=parseInt(n1);
+      	n2=parseInt(n2);
+		op=parseInt(op);
+		switch(op){
+			case 1:
+			res= n1 + n2;
+			alert("La suma de "+n1+" + "+n2+" es: "+ res);
+			break;
+			case 2:
+			res= n1 - n2;
+			alert("La resta de "+n1+" - "+n2+" es: "+ res);
+			break;
+			case 3:
+			res= n1 * n2;
+			alert("La Multiplicación de "+n1+" * "+n2+" es: "+ res);
+			break;
+			case 4:
+			res= n1 / n2;
+			alert("La Divición de "+n1+" / "+n2+" es: "+ res);
+			break;
+			case 5:
+			res= Math.pow(n1, n2);
+			alert("La potencia de "+n1+" ^ "+n2+" es: "+ res);
+			break;
+		}
+	}
+	
+</script>
+</head>
+<body>
+<a href="index.html" title="Inicio" target="_parent">Inicio</a></p>
+<h1 align="center">Ejercicio 04</h1>
+<h2 align="center"> Calculadora </h2>
+<p>En el siguiente forulario el usuario digita los números, elije la operación a realizar y el sistema ejecutara la operación para mostrar la misma con su respectivo resultado. </p>
+<form id="form1" name="form1" method="POST">
+  <p>
+    <label for="tx_num1">Número 1:</label>
+    <input type="number" name="t_num1" id="t_num1"/>
+  </p>
+  <p>
+    <label for="tx_num2">Número 2:</label>
+    <input type="number" name="t_num2" id="t_num2" />
+  </p>
+  <p>
+    <input type="radio" name="opcion" id="op" value= 1 />
+    <label>Suma</label>
+    <input type="radio" name="opcion" id="op" value= 2 />
+    <label>Resta</label>
+    <input type="radio" name="opcion" id="op" value= 3 />
+    <label>Multiplicación</label>
+    <input type="radio" name="opcion" id="op" value= 4 />
+    <label>Divición</label>
+    <input type="radio" name="opcion" id="op" value= 5 />
+    <label>Potencia "pow"</label>
+  </p>
+  <p>
+    <input type="submit" name="bt" id="bt" value="Enviar" onclick="datos()" />
+  </p>
+</form>
+<p>
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+</body>
+</html>
